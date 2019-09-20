@@ -1,0 +1,262 @@
+@import "_mixin";
+
+body {
+  background-color: whitesmoke;
+}
+
+#navbar {
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.9), #e66465);
+  padding: 10px 25px;
+  display: flex;
+  justify-content: space-between;
+
+  a:hover:after {
+    width: 100%;
+    background: transparent;
+    transition: all 1s ease;
+  }
+}
+
+#brandlogo {
+  position: relative;
+  top: -3px;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 4px 15px 7px;
+  text-shadow: 0 1px 0 whitesmoke, 0 2px 0 rgba(0, 0, 0, 0.8),
+    0 3px 0 rgba(0, 0, 0, 0.8), 0 4px 0 rgba(0, 0, 0, 0.8),
+    0 5px 0 rgba(0, 0, 0, 0.8), 0 6px 0 rgba(0, 0, 0, 0.8),
+    0 7px 0 rgba(0, 0, 0, 0.8), 0 8px 0 rgba(0, 0, 0, 0.8),
+    0 15px 15px rgba(0, 0, 0, 0.5);
+  border-bottom: 5px solid rgba(0, 0, 0, 0.5);
+  background: linear-gradient(to left, lightblue, rgba(0, 0, 0, 0.9), #e66465);
+  border-radius: 20px;
+
+  a {
+    color: transparent;
+    text-decoration: none;
+  }
+}
+
+#navlinks {
+  a {
+    color: lightcyan;
+    margin: 0px 10px;
+    padding: 0px 5px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: border 0.3s linear;
+    position: relative;
+    top: 10px;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 2px;
+      width: 0;
+      transition: width 0.5s ease, background 0.5s ease;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      height: 2px;
+      width: 0;
+      background: linear-gradient(
+        to left,
+        lightblue,
+        rgba(0, 0, 0, 0.9),
+        #e66465
+      );
+      transition: width 0.5s ease;
+    }
+
+    &:hover::before {
+      width: 100%;
+      background: linear-gradient(
+        to left,
+        lightblue,
+        rgba(0, 0, 0, 0.9),
+        #e66465
+      );
+      transition: width 0.5s ease;
+    }
+  }
+}
+
+#main {
+  background-image: url("https://res.cloudinary.com/fizy2019/image/upload/v1568708926/IMG-20190917-WA0003_atn9f6.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  overflow-y: scroll;
+}
+
+#loginCaption {
+  > p {
+    color: whitesmoke;
+  }
+  & p:first-child {
+    font-size: 25px;
+    font-weight: 600;
+
+    @include mQ(480px) {
+      font-size: 20px;
+    }
+  }
+
+  & p:nth-child(2) {
+    font-size: 18px;
+
+    @include mQ(480px) {
+      font-size: 17px;
+    }
+  }
+}
+
+#regForm {
+  position: relative;
+  top: 20px;
+  width: 600px;
+  border-radius: 5px;
+  background-color: lighten($color: grey, $amount: 40);
+  margin: auto;
+  margin-bottom: 100px;
+
+  @include mQ(630px) {
+    width: 90%;
+  }
+
+  $darkbg: darken(
+    $color: grey,
+    $amount: 25
+  );
+  $lightbg: lighten(
+    $color: grey,
+    $amount: 30
+  );
+
+  nav {
+    border-bottom: 2px solid $lightbg;
+
+    a {
+      color: black;
+      display: inline-block;
+      margin: 0;
+      outline: none;
+      padding: 12px 0px;
+      text-align: center;
+      text-decoration: none;
+      transition: all 0.3s ease-out;
+      width: 50%;
+
+      @include mQ(480px) {
+        padding: 10px 0px;
+        font-size: 14px;
+      }
+
+      &.active {
+        background-color: $darkbg;
+        color: whitesmoke;
+        font-weight: bold;
+
+        &:hover {
+          background-color: $darkbg;
+        }
+      }
+
+      &:first-child {
+        border-right: 2px solid lighten($color: grey, $amount: 30);
+      }
+
+      &:hover {
+        background-color: darken($color: grey, $amount: 2);
+        color: whitesmoke;
+      }
+    }
+  }
+
+  .forms {
+    padding: 10px 0px;
+
+    #signupSection,
+    #loginSection {
+      width: 50ch;
+    }
+
+    @include mQ(630px) {
+      #signupSection,
+      #loginSection {
+        padding: 0px 15px;
+      }
+    }
+
+    #signupSection {
+      display: none;
+
+      .pgbar {
+        display: none;
+        height: 30px;
+
+        & > .progress-bar {
+          height: inherit;
+        }
+      }
+
+      .section {
+        display: none;
+
+        &.active {
+          display: block;
+        }
+      }
+    }
+
+    .fg {
+      margin: 20px 0px;
+
+      & > label {
+        display: block;
+        font-size: 14px;
+      }
+
+      & > input {
+        background-color: lighten($color: darkgray, $amount: 10);
+        border: none;
+        border-radius: 3px;
+        padding: 8px;
+        outline: none;
+        min-width: 100%;
+
+        &[type="radio"] {
+          min-width: 0ch;
+        }
+      }
+
+      .spanbox {
+        position: relative;
+        top: -2px;
+      }
+
+      & > input[type="button"],
+      & > input[type="submit"] {
+        cursor: pointer;
+        color: whitesmoke;
+        font-size: 14px;
+        font-weight: bold;
+        min-width: auto;
+        padding: 5px 15px;
+
+        & ~ a {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}

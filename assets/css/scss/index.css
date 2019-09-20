@@ -1,0 +1,258 @@
+body {
+  background-color: whitesmoke;
+}
+
+#navbar {
+  background: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0.9)), to(#e66465));
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.9), #e66465);
+  padding: 10px 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#navbar a:hover:after {
+  width: 100%;
+  background: transparent;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+#brandlogo {
+  position: relative;
+  top: -3px;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 4px 15px 7px;
+  text-shadow: 0 1px 0 whitesmoke, 0 2px 0 rgba(0, 0, 0, 0.8), 0 3px 0 rgba(0, 0, 0, 0.8), 0 4px 0 rgba(0, 0, 0, 0.8), 0 5px 0 rgba(0, 0, 0, 0.8), 0 6px 0 rgba(0, 0, 0, 0.8), 0 7px 0 rgba(0, 0, 0, 0.8), 0 8px 0 rgba(0, 0, 0, 0.8), 0 15px 15px rgba(0, 0, 0, 0.5);
+  border-bottom: 5px solid rgba(0, 0, 0, 0.5);
+  background: -webkit-gradient(linear, right top, left top, from(lightblue), color-stop(rgba(0, 0, 0, 0.9)), to(#e66465));
+  background: linear-gradient(to left, lightblue, rgba(0, 0, 0, 0.9), #e66465);
+  border-radius: 20px;
+}
+
+#brandlogo a {
+  color: transparent;
+  text-decoration: none;
+}
+
+#navlinks a {
+  color: lightcyan;
+  margin: 0px 10px;
+  padding: 0px 5px 20px;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: border 0.3s linear;
+  transition: border 0.3s linear;
+  position: relative;
+  top: 10px;
+}
+
+#navlinks a::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  -webkit-transition: width 0.5s ease, background 0.5s ease;
+  transition: width 0.5s ease, background 0.5s ease;
+}
+
+#navlinks a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background: -webkit-gradient(linear, right top, left top, from(lightblue), color-stop(rgba(0, 0, 0, 0.9)), to(#e66465));
+  background: linear-gradient(to left, lightblue, rgba(0, 0, 0, 0.9), #e66465);
+  -webkit-transition: width 0.5s ease;
+  transition: width 0.5s ease;
+}
+
+#navlinks a:hover::before {
+  width: 100%;
+  background: -webkit-gradient(linear, right top, left top, from(lightblue), color-stop(rgba(0, 0, 0, 0.9)), to(#e66465));
+  background: linear-gradient(to left, lightblue, rgba(0, 0, 0, 0.9), #e66465);
+  -webkit-transition: width 0.5s ease;
+  transition: width 0.5s ease;
+}
+
+#main {
+  background-image: url("https://res.cloudinary.com/fizy2019/image/upload/v1568708926/IMG-20190917-WA0003_atn9f6.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  overflow-y: scroll;
+}
+
+#loginCaption > p {
+  color: whitesmoke;
+}
+
+#loginCaption p:first-child {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 480px) {
+  #loginCaption p:first-child {
+    font-size: 20px;
+  }
+}
+
+#loginCaption p:nth-child(2) {
+  font-size: 18px;
+}
+
+@media screen and (max-width: 480px) {
+  #loginCaption p:nth-child(2) {
+    font-size: 17px;
+  }
+}
+
+#regForm {
+  position: relative;
+  top: 20px;
+  width: 600px;
+  border-radius: 5px;
+  background-color: #e6e6e6;
+  margin: auto;
+  margin-bottom: 100px;
+}
+
+@media screen and (max-width: 630px) {
+  #regForm {
+    width: 90%;
+  }
+}
+
+#regForm nav {
+  border-bottom: 2px solid #cdcdcd;
+}
+
+#regForm nav a {
+  color: black;
+  display: inline-block;
+  margin: 0;
+  outline: none;
+  padding: 12px 0px;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  width: 50%;
+}
+
+@media screen and (max-width: 480px) {
+  #regForm nav a {
+    padding: 10px 0px;
+    font-size: 14px;
+  }
+}
+
+#regForm nav a.active {
+  background-color: #404040;
+  color: whitesmoke;
+  font-weight: bold;
+}
+
+#regForm nav a.active:hover {
+  background-color: #404040;
+}
+
+#regForm nav a:first-child {
+  border-right: 2px solid #cdcdcd;
+}
+
+#regForm nav a:hover {
+  background-color: #7b7b7b;
+  color: whitesmoke;
+}
+
+#regForm .forms {
+  padding: 10px 0px;
+}
+
+#regForm .forms #signupSection,
+#regForm .forms #loginSection {
+  width: 50ch;
+}
+
+@media screen and (max-width: 630px) {
+  #regForm .forms #signupSection,
+  #regForm .forms #loginSection {
+    padding: 0px 15px;
+  }
+}
+
+#regForm .forms #signupSection {
+  display: none;
+}
+
+#regForm .forms #signupSection .pgbar {
+  display: none;
+  height: 30px;
+}
+
+#regForm .forms #signupSection .pgbar > .progress-bar {
+  height: inherit;
+}
+
+#regForm .forms #signupSection .section {
+  display: none;
+}
+
+#regForm .forms #signupSection .section.active {
+  display: block;
+}
+
+#regForm .forms .fg {
+  margin: 20px 0px;
+}
+
+#regForm .forms .fg > label {
+  display: block;
+  font-size: 14px;
+}
+
+#regForm .forms .fg > input {
+  background-color: #c3c3c3;
+  border: none;
+  border-radius: 3px;
+  padding: 8px;
+  outline: none;
+  min-width: 100%;
+}
+
+#regForm .forms .fg > input[type="radio"] {
+  min-width: 0ch;
+}
+
+#regForm .forms .fg .spanbox {
+  position: relative;
+  top: -2px;
+}
+
+#regForm .forms .fg > input[type="button"],
+#regForm .forms .fg > input[type="submit"] {
+  cursor: pointer;
+  color: whitesmoke;
+  font-size: 14px;
+  font-weight: bold;
+  min-width: auto;
+  padding: 5px 15px;
+}
+
+#regForm .forms .fg > input[type="button"] ~ a,
+#regForm .forms .fg > input[type="submit"] ~ a {
+  font-size: 15px;
+}
+/*# sourceMappingURL=index.css.map */
