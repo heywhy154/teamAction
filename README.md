@@ -7,5 +7,5 @@ https://www.figma.com/file/NWQKTH6QIqw9PiroOYcC3F2O/team-action?node-id=0%3A1
 View demo at https://hngi6-teamaction.000webhostapp.com/
 
 
-#Lucid post link
+# Lucid post link
 https://lucid.blog/kenn_samm/posts
