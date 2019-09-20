@@ -1,0 +1,68 @@
+.brand {
+  font-size: 1.2em;
+  text-align: center;
+  display: inline;
+}
+
+.brand .bold {
+  background: #000000;
+  border-radius: 5px;
+  color: whitesmoke;
+  font-weight: bold;
+  padding: 5px 10px;
+}
+
+.db_nav {
+  min-height: 50px;
+  background-color: #cccccc;
+  -webkit-box-shadow: 0px 5px 3px #b3b3b3;
+          box-shadow: 0px 5px 3px #b3b3b3;
+}
+
+.db_logout {
+  position: relative;
+  bottom: 5px;
+}
+
+.db_logout button {
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.wm_user {
+  font-size: 14px;
+}
+
+#db_sidebar {
+  background-color: #292929;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  height: 35ch;
+  left: -35ch;
+  margin: 5ch 2ch 5ch 0ch;
+  position: relative;
+  width: 35ch;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+#db_sidebar.active {
+  left: 0ch;
+}
+
+#db_sidebar .togglebtn {
+  color: white;
+  background-color: #292929;
+  padding: 2ch 2ch 2ch 4ch;
+  position: absolute;
+  top: 40%;
+  right: -8%;
+  border-radius: 100px;
+}
+
+#db_sidebar .togglebtn i {
+  position: relative;
+  left: 5px;
+  font-size: 1.5em;
+}
+/*# sourceMappingURL=dashboard.css.map */
