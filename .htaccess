@@ -1,0 +1,11 @@
+# DISABLE CACHING
+<IfModule mod_headers.c>
+	Header set Cache-Control "no-cache, no-store, must-revalidate"
+	Header set Pragma "no-cache"
+	Header set Expires 0
+</IfModule>
+RewriteEngine on
+RewriteRule ^$ /teamAction/index.php [L]
+RewriteRule ^signup$ /teamAction/auth/user.php [L]
+RewriteRule ^dashboard$ /teamAction/dashboard.php [L]
+RewriteRule ^verifyaccount/([a-zA-z0-9]+)$ /teamAction/auth/validation.php?e=$1 [L]
